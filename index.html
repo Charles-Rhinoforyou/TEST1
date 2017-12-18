@@ -11,12 +11,23 @@
     <input type='text' name='quantity' value='0' class='qty' />
     <input type='button' value='+' class='qtyplus' field='quantity' />
     
-    <input type='text' name='x = ' value='0'/>
-    <input type='text' name='y = ' value='0'/>
+
+    <div><input type='text' name='x = ' value='0'/></div>
+    <div><input type='text' name='y = ' value='0'/></div>
+    <div><input type="Calculer_Button" id="button" value="Calculer" /></div>
 
 </form>
 <script>
-jQuery(document).ready(function(){
+
+    $(document).ready(function () {
+            $('#Calculer_Button').click(CalculerButton_onClick);
+    });
+
+    var CalculerButton_onClick = function() {
+        alert('Félicitations !');
+    };
+
+    jQuery(document).ready(function(){
     // This button will increment the value
     $('.qtyplus').click(function(e){
         // Stop acting like a button
