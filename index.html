@@ -7,8 +7,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <body>
 <form id='myform' method='POST' action='#'>   
-    <div><input type='text' name='x = ' value='0'/></div>
-    <div><input type='text' name='y = ' value='0'/></div>
+    <div><input type='text' id='x' name='x = ' value='0'/></div>
+    <div><input type='text' id='y' name='y = ' value='0'/></div>
     <div><input type="button" id="Calculer_Button" value="Calculer" /></div>
     <div>
         <label for="Result_Label">Résultat = </label>
@@ -23,8 +23,14 @@
     });
 
     var CalculerButton_onClick = function() {
-        var Result1 = parseFloat('2.3') + parseFloat('2.4');
+        
+        var e1 = document.getElementById('x').value
+        var e2 = document.getElementById('y').value
+        
+        var Result1 = parseFloat(e1) + parseFloat(e2);
+        
         var Result2 = Result1.toFixed(2));
+        
         var element = document.getElementById("Result_Value");
         element.innerHTML = "Result2";
     };
