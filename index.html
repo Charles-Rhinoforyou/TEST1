@@ -10,7 +10,10 @@
     <div><input type='text' name='x = ' value='0'/></div>
     <div><input type='text' name='y = ' value='0'/></div>
     <div><input type="button" id="Calculer_Button" value="Calculer" /></div>
-    <div><input type='text' id="Solution_Text" name='Solution = ' value=''/></div>
+    <div>
+        <label for="Result_Label">Résultat = </label>
+        <span id="Result_Value"></span>
+    </div>
 
 </form>
 <script>
@@ -20,7 +23,7 @@
     });
 
     var CalculerButton_onClick = function() {
-        var element = document.getElementById("Solution_Text");
+        var element = document.getElementById("Result_Value");
         element.innerHTML = "Félicitations";
     };
 
