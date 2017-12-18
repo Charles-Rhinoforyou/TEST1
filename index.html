@@ -6,15 +6,11 @@
     </head>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <body>
-<form id='myform' method='POST' action='#'>
-    <input type='button' value='-' class='qtyminus' field='quantity' />
-    <input type='text' name='quantity' value='0' class='qty' />
-    <input type='button' value='+' class='qtyplus' field='quantity' />
-    
-
+<form id='myform' method='POST' action='#'>   
     <div><input type='text' name='x = ' value='0'/></div>
     <div><input type='text' name='y = ' value='0'/></div>
     <div><input type="button" id="Calculer_Button" value="Calculer" /></div>
+    <div><input type='text' id="Solution_Text" name='Solution = ' value=''/></div>
 
 </form>
 <script>
@@ -24,7 +20,8 @@
     });
 
     var CalculerButton_onClick = function() {
-        alert('Félicitations !');
+        var element = document.getElementById("Solution_Text");
+        element.innerHTML = "Félicitations";
     };
 
     jQuery(document).ready(function(){
