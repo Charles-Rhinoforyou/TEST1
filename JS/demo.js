@@ -1,5 +1,5 @@
 var demo = {
-    scene: "TEST_QUARTIER",
+    scene: "TEST_CHATEAU",
     incremental: false,
     binary: false,
     doNotUseCDN: false,
