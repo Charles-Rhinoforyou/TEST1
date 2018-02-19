@@ -4,16 +4,8 @@ Exporter version: 5.5.0, Blender version: 2.79 (sub 0)
 		selected layers only:  false
 		flat shading entire scene:  false
 		inline textures:  false
-		texture directory:  C:\Users\CHARLES\Desktop\
+		texture directory:  L:\RHINOFORYOU\03_PROJETS\TOPOMATIC\TECHNOS\BABYLON JS\Website-master\Website-master\Scenes\TEST_CHATEAU\
 	Python World class constructor completed
-	processing begun of mesh:  chateau
-		WARNING: No materials have been assigned: 
-		num positions      :  0
-		num normals        :  0
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  0
 	processing begun of mesh:  object_1
 		processing begun of Standard material:  Nouveau matériau 001
 			Diffuse texture found "Kd"
@@ -51,6 +43,7 @@ Exporter version: 5.5.0, Blender version: 2.79 (sub 0)
 		num indices        :  219831
 	processing begun of mesh:  Cube
 		processing begun of Standard material:  Material
+			WARNING: Mesh has no UV maps, material:  "Kd" ignored
 		num positions      :  8
 		num normals        :  8
 		num uvs            :  0
@@ -62,4 +55,4 @@ Exporter version: 5.5.0, Blender version: 2.79 (sub 0)
 ========= Writing of scene file started =========
 ========= Writing of scene file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 32.7542 secs
+elapsed time:  0 min, 33.8369 secs
