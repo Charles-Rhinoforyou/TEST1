@@ -23,7 +23,7 @@ var toggleSepia = document.getElementById("toggleSepia");
 
 var sceneChecked;
 
-var sceneLocation = "/Scenes/";
+var sceneLocation = "/TEST1/Scenes/";
 
 // Babylon
 var engine = new BABYLON.Engine(canvas, true);
@@ -391,10 +391,10 @@ if (!BABYLON.Engine.isSupported()) {
 } else {
     if (window.location.hostname.indexOf("localhost") === -1 && !demo.forceLocal) {
         if (demo.doNotUseCDN) {
-            sceneLocation = "/Scenes/";
+            sceneLocation = "/TEST1/Scenes/";
         }
         else {
-            sceneLocation = "/Scenes/";
+            sceneLocation = "/TEST1/Scenes/";
         }
     }
 
