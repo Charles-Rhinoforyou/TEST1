@@ -1,0 +1,129 @@
+Exporter version: 5.5.0, Blender version: 2.79 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  C:\Users\CHARLES\Desktop\
+	Python World class constructor completed
+	processing begun of mesh:  Maillage
+		processing begun of Standard material:  texture
+			Diffuse texture found "Kd"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  278262
+	WARNING: The following mesh has exceeded the maximum # of vertex elements & will be broken into multiple Babylon meshes: Maillage
+	processing begun of mesh:  Maillage1
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  260307
+	processing begun of mesh:  Maillage2
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  248307
+	processing begun of mesh:  Maillage3
+		registered as also a user of material:  texture
+		num positions      :  65535
+		num normals        :  65535
+		num uvs            :  131070
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  239424
+	processing begun of mesh:  Maillage4
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  253764
+	processing begun of mesh:  Maillage5
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  240828
+	processing begun of mesh:  Maillage6
+		registered as also a user of material:  texture
+		num positions      :  65534
+		num normals        :  65534
+		num uvs            :  131068
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  233349
+	processing begun of mesh:  Maillage7
+		registered as also a user of material:  texture
+		num positions      :  65534
+		num normals        :  65534
+		num uvs            :  131068
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  219747
+	processing begun of mesh:  Maillage8
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  215562
+	processing begun of mesh:  Maillage9
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  209805
+	processing begun of mesh:  Maillage10
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  216936
+	processing begun of mesh:  Maillage11
+		registered as also a user of material:  texture
+		num positions      :  65533
+		num normals        :  65533
+		num uvs            :  131066
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  249492
+	processing begun of mesh:  Maillage12
+		registered as also a user of material:  texture
+		num positions      :  34629
+		num normals        :  34629
+		num uvs            :  69258
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  134217
+	processing begun of mesh:  Cube
+		processing begun of Standard material:  Material
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (POINT):  Lamp
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  2 min, 27.4906 secs
