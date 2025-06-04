@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Imbrication de rectangles</title>
+<style>
+body {font-family: Arial, sans-serif; display:flex; height:100vh; margin:0;}
+#controls {width:300px; padding:10px; box-sizing:border-box; background:#f0f0f0; overflow-y:auto;}
+#canvasContainer {flex:1; display:flex; justify-content:center; align-items:center;}
+#packingCanvas {border:1px solid #333;}
+label {display:block; margin-top:5px;}
+button {margin-top:5px;}
+</style>
+</head>
+<body>
+<div id="controls">
+  <h2>Gestion des rectangles</h2>
+  <label>Largeur: <input type="number" id="rectWidth" min="1" value="50"></label>
+  <label>Longueur: <input type="number" id="rectHeight" min="1" value="50"></label>
+  <button id="addRect">Ajouter</button>
+  <select id="rectList" size="5" style="width:100%; margin-top:5px;"></select>
+  <h2>Options d'imbrication</h2>
+  <label>Largeur du canevas: <input type="number" id="canvasWidth" min="10" value="500"></label>
+  <label>Hauteur du canevas: <input type="number" id="canvasHeight" min="10" value="400"></label>
+  <label>Rotation: 
+    <select id="rotationOption">
+      <option value="none">Aucune</option>
+      <option value="90">Pas de 90°</option>
+      <option value="free">Pas de 1°</option>
+    </select>
+  </label>
+  <label>Départ horizontal: 
+    <select id="startHorizontal">
+      <option value="left">Gauche</option>
+      <option value="right">Droite</option>
+    </select>
+  </label>
+  <label>Départ vertical: 
+    <select id="startVertical">
+      <option value="top">Haut</option>
+      <option value="bottom">Bas</option>
+    </select>
+  </label>
+  <button id="packBtn">Imbriquer</button>
+  <button id="clearBtn">Vider</button>
+</div>
+<div id="canvasContainer">
+  <canvas id="packingCanvas" width="500" height="400"></canvas>
+</div>
+<script>
+const rectList = document.getElementById('rectList');
+const rectangles = [];
+function refreshList(){
+ rectList.innerHTML='';
+ rectangles.forEach((r,i)=>{
+   const opt=document.createElement('option');
+   opt.textContent=`#${i+1} - ${r.w} x ${r.h}`;
+   rectList.appendChild(opt);
+ });
+}
+document.getElementById('addRect').onclick=function(){
+ const w=parseInt(document.getElementById('rectWidth').value,10);
+ const h=parseInt(document.getElementById('rectHeight').value,10);
+ if(w>0 && h>0){
+   rectangles.push({w,h});
+   refreshList();
+ }
+};
+function pack(){
+ const canvas=document.getElementById('packingCanvas');
+ const ctx=canvas.getContext('2d');
+ canvas.width=parseInt(document.getElementById('canvasWidth').value,10);
+ canvas.height=parseInt(document.getElementById('canvasHeight').value,10);
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+ let x=0,y=0,rowH=0;
+ const rot=document.getElementById('rotationOption').value;
+ const startH=document.getElementById('startHorizontal').value;
+ const startV=document.getElementById('startVertical').value;
+ rectangles.forEach(r=>{
+   let w=r.w,h=r.h;
+   if(rot!=='none' && w>canvas.width){[w,h]=[h,w];}
+   if(startH==='left'){
+     if(x+w>canvas.width){x=0;y+=rowH;rowH=0;}
+     if(y+h>canvas.height) return;
+     drawRect(ctx,x,y,w,h,startH,startV,canvas);
+     x+=w;rowH=Math.max(rowH,h);
+   }else{
+     if(x-w<0){x=canvas.width;y+=rowH;rowH=0;}
+     if(y+h>canvas.height) return;
+     x-=w;drawRect(ctx,x,y,w,h,startH,startV,canvas);
+     rowH=Math.max(rowH,h);
+   }
+ });
+}
+function drawRect(ctx,x,y,w,h,startH,startV,canvas){
+ let drawX=startH==='right'?canvas.width-x-w:x;
+ let drawY=startV==='bottom'?canvas.height-y-h:y;
+ ctx.strokeRect(drawX,drawY,w,h);
+}
+function clearAll(){
+ rectangles.length=0;
+ refreshList();
+ const canvas=document.getElementById('packingCanvas');
+ const ctx=canvas.getContext('2d');
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+document.getElementById('packBtn').onclick=pack;
+document.getElementById('clearBtn').onclick=clearAll;
+</script>
+</body>
+</html>
