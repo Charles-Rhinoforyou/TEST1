@@ -35,3 +35,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+## Jeu du Serpent
+
+Un exemple simple de jeu du serpent est disponible dans le fichier [snake.html](snake.html). Ouvrez cette page dans votre navigateur pour jouer.
